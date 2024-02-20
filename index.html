@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="immagini/user-tab.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
+    <title>Registration</title>
+
+    <style>
+        :root {
+            --colorecard: #0958FF;
+            --colorebordi: #0693FF;
+            --bottonenormlae: #0693FF;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        * {
+            font-family: "Fragment Mono", monospace;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        a,
+        label,
+        h1 {
+            color: #dfdfdf;
+        }
+
+        .box-card {
+            width: 30%;
+            margin: auto;
+            border-radius: 7px;
+            margin-top: 35px;
+            background-color: var(--colorecard);
+            border: groove 8px var(--colorebordi);
+            box-shadow: inset 0px 0px 105px -22px black;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .box-card img {
+            border: 5px solid var(--colorebordi);
+            border-radius: 100px;
+            padding: 2px;
+            background-color: white;
+        }
+
+        h1 {
+            background-color: #5db9ff;
+            background-color: #5db9ff;
+            width: 58%;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: -4px 4px 16px 0px black;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        label {
+            margin: 5px 0px 5px 0px;
+        }
+
+        input {
+            border-radius: 7px;
+            border: 2px solid black;
+            padding: 5px;
+        }
+
+        input[type="submit"] {
+            margin-top: 25px;
+            padding: 15px;
+            background-color: var(--bottonenormlae);
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #5db9ff;
+        }
+
+        input[type="submit"]:active {
+            background-color: var(--colorecard);
+        }
+
+        input[type="text"]:required,
+        input[type="password"]:required,
+        input[type="email"]:required {
+            outline: 4px solid #5db9ff;
+        }
+
+        input[type="text"]:hover,
+        input[type="password"]:hover,
+        input[type="email"]:hover {
+            background-color: #5db9ff;
+            outline: none;
+        }
+
+        input[type="text"]:valid,
+        input[type="password"]:valid,
+        input[type="email"]:valid {
+            outline: none;
+        }
+
+        /* input[type="text"]:invalid,
+        input[type="password"]:invalid,
+        input[type="email"]:invalid {
+            outline: #d10000;
+        } */
+
+        label[for="check"] {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .checkbox {
+            display: block;
+            width: 15px;
+            height: 15px;
+            background-size: contain;
+            background-image: url(immagini/square.png);
+            position: relative;
+            left: -17px;
+        }
+
+        input[type="checkbox"]:checked~.checkbox {
+            background-image: url(immagini/checked.png);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box-card">
+        <h1>Registration</h1>
+        <img src="immagini/user.png" alt="icona utente">
+        <form action="" method="post">
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome" required placeholder="Es.Gino">
+            <label for="cognome">Cognome</label>
+            <input type="text" name="cognome" id="cognome" required placeholder="Es.Verdi">
+            <label for="telefono">Telefono</label>
+            <input type="text" name="telefono" id="telefono" placeholder="+39 3494556792">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" required placeholder="Es.ciciopicio">
+            <label for="email">E-Mail</label>
+            <input type="email" name="email" id="email" required placeholder="Es.gg09@gmail.com">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" required>
+            <label for="password">Conferma Password</label>
+            <input type="password" name="password" id="password" required>
+            <input type="submit" value="Registration">
+            <label for="check">
+                <input type="checkbox" name="check" id="check" required>
+                <span class="checkbox"></span>
+                Acconsento al trattamento dei dati e della privacy.
+            </label>
+        </form>
+    </div>
+
+</body>
+
+</html>
